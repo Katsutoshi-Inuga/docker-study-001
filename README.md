@@ -14,19 +14,19 @@ https://qiita.com/koinori/items/78a946fc74452af9afba#ubuntu-1604-lts--docker-170
 
 サンプルコードぐらいは動くが逆にそれ以外はなにも動かない
 
-#### ②docker on Linux on VirtualBox（ちゃんとしたLinuxの環境作りたい人向け）
+#### ②docker on Linux on VirtualBox（ローカルPCでちゃんとしたLinuxの環境作りたい人向け）
 
 今動いているWindowsに一度VirtualBoxを入れてその中でLinux　Dockerとつかっていきたい人向け
 
 https://qiita.com/idani/items/fb7681d79eeb48c05144
 
-#### ③docker on Linux on EC2（ちゃんとしたLinuxの環境作りたい人向け）
+#### ③docker on Linux on EC2（クラウドでちゃんとしたLinuxの環境作りたい人向け）
 
 個人のEC2でLinux立ち上げてそこでDocker動かす
 
 https://qiita.com/yumatsud/items/33bc22f7d8f640a286f4
 
-#### ④Docker for windows（推奨）
+#### ④Docker for windows（まぁまぁ大変）
 
 Windows10 Proでしか動かないので、要確認
 https://qiita.com/manamiTakada/items/c1394e5e3358802a9446
