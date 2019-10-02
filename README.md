@@ -2,15 +2,17 @@
 
 ## Docker勉強会用資料
 
-### Docker環境の構築
+### Docker環境の構築(事前準備)　勉強会当日までなんとかDockerの動く環境を作ってください
 
 以下の①～④のどれか
 
-#### ①docker on WSL（推奨）
+#### ①docker on WSL（非推奨）
 
 今動いているWindowsに直にLinuxを入れるパターン
 
 https://qiita.com/koinori/items/78a946fc74452af9afba#ubuntu-1604-lts--docker-17033
+
+サンプルコードぐらいは動くが逆にそれ以外はなにも動かない
 
 #### ②docker on Linux on VirtualBox（ちゃんとしたLinuxの環境作りたい人向け）
 
@@ -24,10 +26,10 @@ https://qiita.com/idani/items/fb7681d79eeb48c05144
 
 https://qiita.com/yumatsud/items/33bc22f7d8f640a286f4
 
-#### ④Docker for windows（非推奨）
+#### ④Docker for windows（推奨）
 
 Windows10 Proでしか動かないので、要確認
-
+https://qiita.com/manamiTakada/items/c1394e5e3358802a9446
 https://ops.jig-saw.com/techblog/docker-for-windows-install/
 
 
