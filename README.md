@@ -29,7 +29,9 @@ https://qiita.com/yumatsud/items/33bc22f7d8f640a286f4
 #### ④Docker for windows（まぁまぁ大変）
 
 Windows10 Proでしか動かないので、要確認
+
 https://qiita.com/manamiTakada/items/c1394e5e3358802a9446
+
 https://ops.jig-saw.com/techblog/docker-for-windows-install/
 
 
