@@ -90,6 +90,14 @@ For more examples and ideas, visit:
 ```
 #### docker imageの事前pull
 ```
-root@inuga-VirtualBox:~# docker pull dataiku/dss
+root@inuga-VirtualBox:~# docker pull ubuntu
+root@inuga-VirtualBox:~# docker pull mysql:5.7
 root@inuga-VirtualBox:~# docker pull wordpress
 ```
+
+#### これを機会にdataiku入れたい人向け
+```
+root@inuga-VirtualBox:~# docker pull dataiku/dss
+```
+
+EOF
