@@ -19,5 +19,5 @@ docker-coposeファイルで、これを使用することにより、運用負�
 
 ### docker composeを使用する場合の起動方法
 ```
-inuga@inuga-VirtualBox:~/docker-study-001/wordpress$ sudo docker
+inuga@inuga-VirtualBox:~/docker-study-001/wordpress$ sudo docker-compose up
 ```
