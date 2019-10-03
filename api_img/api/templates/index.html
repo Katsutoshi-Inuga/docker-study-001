@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/css/uikit.min.css" />
+        <script src="/static/js/uikit.min.js"></script>
+        <script src="/static/js/uikit-icons.min.js"></script>
+        <title>api manual</title>
+    </head>
+    <body>
+    <h1>消費税算出API</h1>
+    <hr>
+      <pre>疎通確認</pre>
+      <h2>health-check</h2>
+      <h3>API疎通確認用(get)</h3>
+      <p>
+       http://xxxx/health-check
+      </p>
+      <div>
+	      <ul style="list-style-type:square">
+	      <li>curl http://xxxx/health-check</li>
+	      <li>正常時：HTTPStatus:2xx value:ok</li>
+	      <li>異常時：HTTPStatus:2xx以外</li>
+	      </ul>
+      </div>
+
+    <hr>
+      <pre>標準税率</pre>
+      <h2>stdtaxinc</h2>
+      <h3>API標準税率10%(post)</h3>
+      <p>
+       http://xxxx/std
+      </p>
+      <div>
+              <ul style="list-style-type:square">
+              <li>curl -X POST -d 1000 http://xxxx/std</li>
+              <li>正常時：HTTPStatus:2xx value:1100</li>
+              <li>異常時：HTTPStatus:2xx以外</li>
+              </ul>
+      </div>
+
+    <hr>
+      <pre>軽減税率</pre>
+      <h2>reduced tax</h2>
+      <h3>API軽減税率8%(post)</h3>
+      <p>
+       http://xxxx/red
+      </p>
+      <div>
+              <ul style="list-style-type:square">
+              <li>curl -X POST -d 1000 http://xxxx/red</li>
+              <li>正常時：HTTPStatus:2xx value:1080</li>
+              <li>異常時：HTTPStatus:2xx以外</li>
+              </ul>
+      </div>
+
+    <footer>
+    <address>Copyright(C)2019 umi-yama-sho-ji,Allright Reserved.</address>
+    </footer> 
+    </body>
+</html>
