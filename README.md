@@ -100,4 +100,7 @@ root@inuga-VirtualBox:~# docker pull wordpress
 root@inuga-VirtualBox:~# docker pull dataiku/dss
 ```
 
+#### 当日資料
+https://katsutoshi-inuga.github.io/docker-study-001-docs/
+
 EOF
