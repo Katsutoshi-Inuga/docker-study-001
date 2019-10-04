@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Docker勉強会</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Docker勉強会</h1>
+					<h3>目的</h3>
+					<ul>
+						<li>共通理解を深めたい</li>
+						<li>アプリも自分たちでImageを作れるようになってほしい</li>
+						<li>簡単な概念説明はする</li>
+						<li>HANDS' ON形式で</li>
+					</ul>
+					<p>
+						<small>Speaker k.inuga</small>
+					</p>
+				</section>
+
+				<section>
+					<h1>事前準備</h1>
+					<h3>本勉強会が始まるまでに、以下の環境をつくっておいてください</h3>
+					<ul>
+						<li>Dockerが動くこと</li>
+						<li>docker-composeが動くこと</li>
+					</ul>
+					<a href="https://github.com/Katsutoshi-Inuga/docker-study-001/blob/master/README.md" target="_blank">README.md参照</a>
+				</section>
+				
+				<section>
+					<h1>Dockerとは？</h1>
+					<pre>資料作ろうかと思ったけど、いい記事がたくさんあるので、それを見ながら</pre>
+					<ul>
+					<li><a href="https://qiita.com/miyasakura_/items/87ccb6d4a52d4a00a999" target="_blank">Docker初めての人向け説明メモ</a></li>
+					<li><a href="https://knowledge.sakura.ad.jp/13265/" target="_blank">Docker入門（第一回）～Dockerとは何か、何が良いのか～</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h1>DockerHubとは？</h1>
+						<pre>Dockerのイメージの公開先</pre>
+						<ul>
+							<li>個人や団体、企業が作ったimageの集約先</li>
+							<li>githubをリスペクしているので、思想は近い＝用語が似てる</li>
+						</ul>
+						<a href="https://hub.docker.com" target="_blank">dockerhub</a>
+					</section>
+					<section>
+						<h3>DockerHubの注意事項</h3>
+						<ul>
+							<li>Docker Certified(Docker社が認証した)imageとそれ以外</li>
+							<li>Docker Certified：有名どころの団体でそのまま使っても安心(OracleやIBM製品)</li>
+							<li>非Docker Certified：上記以外個人が作ったimageでたとえばスパイウェア的なものが含まれていても、image化されているので気づきにくい</li>
+							<li>非Docker Certified：非Docker CertifiedだけどOFFCIAL IMAGEのタグが付いているもの(ubuntuやPostgres)</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Dockerのセキュリティー回りの事案</h3>
+						<ul>
+						<li><a href="https://blog.trendmicro.co.jp/archives/21756" target="_blank">露出したDocker APIを介してコンテナに侵入するボット型マルウェア「AESDDoS」について解説</a></li>
+						<li><a href="https://news.mynavi.jp/article/20190215-771952/" target="_blank">コンテナランタイム「runc」に脆弱性、Dockerなどに影響 - JPCERT/CC</a></li>
+						<li><a href="https://japan.zdnet.com/article/35137299/" target="_blank">「Docker Hub」ポータル、著名コンテナの20％に設定ミス</a></li>
+						<strong>便利そうなimageがあってもすぐに飛びつかない。</strong><br>
+						<strong>DockerCertified,OFFICAL IMAGE,他Reviewや☆Ratingなどに注意する</strong>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>★word pressの起動の仕方　Hands' on</h3>
+						<p>DockerHubに公開されていimageの使い方_wordpressの場合</p>
+						<ul>
+						<li><a href="https://hub.docker.com/_/wordpress" target="_blank">dockerhub_wordpress</a></li>
+						<li><a href="https://github.com/Katsutoshi-Inuga/docker-study-001/tree/master/wordpress" target="_blank">github_wordpress</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>dataikuの起動の仕方</h3>
+						<pre>おまけ</pre>
+						<code>docker pull dataiku/dss</code></br>
+						<code>docker run -p 10000:10000 -d dataiku/dss</code>
+						<div>ブラウザで http://localhost:10000 へアクセス</div>
+					</section>
+				</section>
+
+				<section>
+					<h3>Dockerでよく使うコマンド</h3>
+					<pre>大事なのは起動、停止、削除</pre>
+					<ul>
+						<li><a href="https://qiita.com/omukaik/items/529b519e606aec42fa3c" target="_blank">よく使うDockerコマンド集</a></li>
+						<li><a href="https://qiita.com/saint-exupery/items/f367064f7c778a6bbdc4" target="_blank">Docker のコマンド忘れやすいため</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>★Docker Imageを作る　Hands' on</h3>
+					<ul>
+						<li><a href="https://github.com/Katsutoshi-Inuga/docker-study-001/tree/master/api_img" target="_blank">github_api_img</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
